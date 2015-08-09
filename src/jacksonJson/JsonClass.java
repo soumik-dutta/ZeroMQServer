@@ -14,6 +14,7 @@ public class JsonClass {
 	/**
 	 * <p>The method will get the string as a parameter and return the class</p>
 	 * @param classString
+	 * @return 
 	 * @return child class of Request class
 	 */
 	public Object getJsonClass(String classString){

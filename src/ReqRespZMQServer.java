@@ -15,6 +15,8 @@ import java.util.StringTokenizer;
 
 import org.zeromq.ZMQ;
 
+import controller.ReqResController;
+
 public class ReqRespZMQServer {
 
     public static void main(String[] args) throws Exception {
@@ -30,42 +32,12 @@ public class ReqRespZMQServer {
            String request = responder.recvStr();
             System.out.println(request);
             
-            /*
-             * To extract what type to class to be initialize
-             * */
-            StringTokenizer tokenizer=new StringTokenizer(request, "\"");
-            int i=0;
-            String typeOfRequest = null;
-            while(tokenizer.hasMoreTokens()){
-            	tokenizer.nextToken();
-            	if(i++==2){
-            		typeOfRequest=tokenizer.nextToken();
-            		break;
-            	}
-            }
-            
-            
-            //converting string to JSON
-            JsonClass jsonClass=new JsonClass().getJsonClass(typeOfRequest);  	   		
-    		//JsonClass json=(jsonClass.getClass())jsonDecode.decodeJSON(request,jsonClass);
-            JsonClass json=jsonDecode.decodeJSON(request, jsonClass);
-            String username=json.getName();
-            String password=json.getPassword();
-            /*
-            //mongoDB connection
-            MongoSelect mongoSelect=new MongoSelect();
-            Boolean status=mongoSelect.authenticate(username, password);*/
-            
-            // Do some 'work'
-            Thread.sleep(1000);
-
-            // Send reply back to client
-            String reply ;
-            if(status)
-            	reply= "Login Successfully";
-            else
-            	reply="Username Password Invalid";
-            responder.send(reply.getBytes(), 0);
+            ReqResController controller=new ReqResController();
+    		controller.setRequest(request);
+    		String responseString=controller.mainController();
+    		System.out.println(responseString);
+    		
+            responder.send(responseString.getBytes(), 0);
         }
         responder.close();
         context.term();

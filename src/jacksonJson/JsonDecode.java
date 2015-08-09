@@ -20,7 +20,7 @@ public class JsonDecode {
 	 * @param  jsonString,Serialized Object class
 	 * @author soumik 
 	 */
-   public <T extends Object> T decodeJSON(String jsonString,T t){
+   public <T extends JsonClass> T decodeJSON(String jsonString,T t){
 	   ObjectMapper mapper=new ObjectMapper();
 	   /*
 	    * map json to Class T
