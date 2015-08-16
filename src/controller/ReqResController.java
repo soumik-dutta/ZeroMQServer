@@ -32,7 +32,9 @@ public class ReqResController {
 		String responseString=null;
 		switch(getRequestedClassString){
 			case "Auth":{
+				//creating the user objeect
 				User user=new User();
+				//creating the serializing object from the input JSON
 				User json=new JsonDecode().decodeJSON(request, user);
 				
 				String username=json.getName();
