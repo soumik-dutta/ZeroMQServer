@@ -3,6 +3,7 @@ clear
 echo "------------Setting up variables username and email---------"
 echo "-------------Starting-----------------"
 echo
+cd Server
 git config --global user.name "soumik652"
 git config --global user.email "soumik652@hotmail.com"
 echo 

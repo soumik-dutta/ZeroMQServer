@@ -13,9 +13,7 @@ echo "----------------Starting-----------------"
 echo
 git init
 git add *
-git add src/
-git add bin/
-git commit -m "date"
+git commit -m "Mon Aug 17 00:45:45 IST 2015"
 git status
 echo "-----------End -----"
 echo 
