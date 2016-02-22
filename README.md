@@ -1,5 +1,5 @@
 
-# Communicating ZeroMQ with Java [Cross platform communication]
+# Communicating nodeJS with Java [Cross platform communication using ZMQ]
 
 >First download zeroMQ from [here][link1] and follow the [steps][link2] given this will install the zeroMQ native files in your system.
 
