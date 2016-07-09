@@ -30,9 +30,10 @@ First we have to export the java project in .jar format and named as  __ZeroServ
 
 
 #### Client-Node
-Client is easy to run just start app.js and [click][link4]
+Client is easy to run just start app.js the project is available [link4]
 
 #### For JSON converting Jackson is used
+
 
 
 
@@ -41,7 +42,6 @@ Client is easy to run just start app.js and [click][link4]
    [link1]: <http://zeromq.org/area:download>
    [link2]:<http://zeromq.org/area:download#toc6>
    [link3]:<http://zeromq.org/bindings:java>
-   [link4]:<http://localhost:3000/ReqRespZMQClient>
+   [link4]:<https://github.com/soumik-dutta/ZeroMQClient>
    
-Status API Training Shop Blog About Pricing
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
+
