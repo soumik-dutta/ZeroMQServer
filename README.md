@@ -30,7 +30,7 @@ First we have to export the java project in .jar format and named as  __ZeroServ
 
 
 #### Client-Node
-Client is easy to run just start app.js the project is available [link4]
+Client is easy to run just start app.js the project is available [ZeroMQ-client][link4]
 
 #### For JSON converting Jackson is used
 
